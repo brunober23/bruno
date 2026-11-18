@@ -803,3 +803,10 @@ html:not(.js) .faq__ac{opacity:1}
 
 /* h1 do hero no mobile: 32px */
 @media (max-width:720px){.hero__title{font-size:32px}}
+
+/* filtro escuro mais leve nas imagens de "O que fazemos" */
+.svcx__m img{filter:saturate(.8) brightness(1) contrast(1.03)}
+@media (min-width:1025px){
+  .svcx__fig::after{background:linear-gradient(180deg,rgba(23,23,33,.08) 0,rgba(23,23,33,0) 30%,rgba(23,23,33,.34) 100%)}
+  .svcx__px img,.svcx:hover .svcx__fig img,.svcx__stage:hover .svcx__px img{filter:saturate(.8) brightness(1) contrast(1.03)}
+}
