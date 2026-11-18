@@ -817,3 +817,7 @@ html:not(.js) .faq__ac{opacity:1}
   .nav__inner,.nav__row2{padding-left:0;padding-right:0}
 }
 @media (max-width:860px){.nav,.nav.is-scrolled{padding-left:16px;padding-right:16px}}
+
+/* foto de credibilidade com filtro escuro mais leve */
+.shot__media::after{background:linear-gradient(180deg,rgba(23,23,33,.03),rgba(23,23,33,.14))}
+.shot__media img{filter:saturate(.85) brightness(1) contrast(1.02)}
