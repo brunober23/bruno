@@ -821,3 +821,6 @@ html:not(.js) .faq__ac{opacity:1}
 /* foto de credibilidade com filtro escuro mais leve */
 .shot__media::after{background:linear-gradient(180deg,rgba(23,23,33,.03),rgba(23,23,33,.14))}
 .shot__media img{filter:saturate(.85) brightness(1) contrast(1.02)}
+
+/* foto do engenheiro: enquadra o rosto, que fica à direita da imagem */
+.eng__img img{object-position:82% 40%}
