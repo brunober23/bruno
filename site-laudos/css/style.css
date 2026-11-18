@@ -810,3 +810,10 @@ html:not(.js) .faq__ac{opacity:1}
   .svcx__fig::after{background:linear-gradient(180deg,rgba(23,23,33,.08) 0,rgba(23,23,33,0) 30%,rgba(23,23,33,.34) 100%)}
   .svcx__px img,.svcx:hover .svcx__fig img,.svcx__stage:hover .svcx__px img{filter:saturate(.8) brightness(1) contrast(1.03)}
 }
+
+/* mobile: 16px entre o header e as bordas do celular */
+@media (max-width:860px){
+  .nav{padding-left:16px;padding-right:16px}
+  .nav__inner,.nav__row2{padding-left:0;padding-right:0}
+}
+@media (max-width:860px){.nav,.nav.is-scrolled{padding-left:16px;padding-right:16px}}
