@@ -800,3 +800,6 @@ html:not(.js) .faq__ac{opacity:1}
 /* h1 do hero +8px */
 .hero__title{font-size:clamp(44px,5vw + 14px,80px)}
 @media (max-width:720px){.hero__title{font-size:clamp(40px,9vw + 8px,48px)}}
+
+/* h1 do hero no mobile: 32px */
+@media (max-width:720px){.hero__title{font-size:32px}}
