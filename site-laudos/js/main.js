@@ -283,88 +283,66 @@
   }
 
 
-  /* ---------- 7d. Serviços prestados: roda de cards (scroll, arraste, abas) ---------- */
+  /* ---------- 7d. Serviços prestados: carrossel horizontal (scroll, arraste, abas, setas) ---------- */
   const lite = $('.lite');
   if (lite) {
-    const run = $('.lite__run'), wheel = $('.lwheel'), ring = $('.lwheel__ring');
-    const cards = $$('.lcard'), tabs = $$('.ltab'), count = $('.lite__count b');
+    const run = $('.lite__run'), wheel = $('.lwheel'), track = $('.lwheel__track');
+    const cards = $$('.lcard'), tabs = $$('.ltab'), count = $('.lite__count b'), fill = $('.lite__fill');
     const prev = $('.lite__prev'), next = $('.lite__next');
-    const n = cards.length, STEP = 20 * Math.PI / 180;
-    let stepX = 400, R = 1100, runway = 0, pos = 0, tgt = 0, raf = 0, idx = 0, snapT = 0, busy = 0;
+    const n = cards.length;
+    const factor = () => (innerWidth < 900 ? 1.3 : 1.9);
+    let travel = 0, runway = 0, cur = 0, tgt = 0, raf = 0, idx = -1, drag = null, blockClick = false;
     const clampN = (v, a, b) => Math.min(b, Math.max(a, v));
-    const perCard = () => (n > 1 ? runway / (n - 1) : 1);
+    // paradas igualmente espaçadas ao longo do percurso: cada serviço tem a sua, mesmo que os últimos caibam juntos na tela
+    const stops = () => cards.map((_, i) => (n > 1 ? (i / (n - 1)) * travel : 0));
     const measure = () => {
-      stepX = cards[0].offsetWidth * 1.06;
-      R = stepX / Math.sin(STEP);
-      runway = (n - 1) * Math.max(420, innerHeight * 0.62);
+      travel = Math.max(0, track.offsetWidth - innerWidth);
+      runway = travel * factor();
       run.style.height = (innerHeight + runway) + 'px';
-      ring.style.top = (cards[0].offsetHeight / 2 + R - 1000) + 'px';
     };
     const setScroll = y => {
       if (lenis) lenis.scrollTo(y, { immediate: true, force: true });
       else window.scrollTo(0, y);
     };
-    const layout = () => {
-      cards.forEach((c, i) => {
-        let d = i - pos;
-        d = ((d + n / 2) % n + n) % n - n / 2;
-        const ad = Math.abs(d), a = clampN(d, -2.6, 2.6) * STEP;
-        c.style.transform = 'translate3d(' + (R * Math.sin(a)).toFixed(1) + 'px,' + (R * (1 - Math.cos(a))).toFixed(1) + 'px,0) rotate(' + (a * 180 / Math.PI).toFixed(2) + 'deg)';
-        c.style.zIndex = String(20 - Math.round(ad * 4));
-        const o = innerWidth < 900
-          ? clampN(1 - (ad - 0.3), 0, 1)
-          : clampN(1 - (ad - 2.1) * 2.2, 0, 1);
-        c.style.opacity = o.toFixed(3);
-        c.style.pointerEvents = o < 0.05 ? 'none' : '';
-        c.classList.toggle('is-active', ad < 0.5);
+    const paint = () => {
+      track.style.transform = 'translate3d(' + (-cur).toFixed(1) + 'px,0,0)';
+      fill.style.transform = 'scaleX(' + (travel ? cur / travel : 0).toFixed(4) + ')';
+      const best = travel ? Math.round((cur / travel) * (n - 1)) : 0;
+      cards.forEach(c => {
+        const r = c.getBoundingClientRect();
+        c.style.opacity = clampN((r.right - 30) / (r.width * 0.55), 0.28, 1).toFixed(3);
       });
-      ring.style.transform = 'rotate(' + (pos * 20) + 'deg)';
-      const k = ((Math.round(pos) % n) + n) % n;
-      if (k !== idx) {
-        idx = k;
-        count.textContent = String(k + 1).padStart(2, '0');
-        tabs.forEach((t, j) => { t.classList.toggle('is-active', j === k); t.setAttribute('aria-selected', String(j === k)); });
+      if (best !== idx) {
+        idx = best;
+        count.textContent = String(best + 1).padStart(2, '0');
+        tabs.forEach((t, j) => { t.classList.toggle('is-active', j === best); t.setAttribute('aria-selected', String(j === best)); });
+        cards.forEach((c, j) => c.classList.toggle('is-active', j === best));
       }
     };
     const tick = () => {
       raf = 0;
-      const d = tgt - pos;
-      if (Math.abs(d) < 0.002) { pos = tgt; layout(); return; }
-      pos += d * 0.12; layout(); raf = requestAnimationFrame(tick);
-    };
-    const runTop = () => run.getBoundingClientRect().top + scrollY();
-    const toScroll = i => runTop() + i * perCard();
-    const snap = () => {
-      const p = -run.getBoundingClientRect().top / Math.max(1, runway);
-      if (p <= 0 || p >= 1 || busy) return;
-      const f = p * (n - 1), k = Math.round(f);
-      if (Math.abs(f - k) < 0.015) return;
-      busy = 1;
-      const y = toScroll(k);
-      if (lenis) lenis.scrollTo(y, { duration: 0.8, onComplete: () => { busy = 0; } });
-      else { window.scrollTo({ top: y, behavior: 'smooth' }); setTimeout(() => { busy = 0; }, 700); }
+      const d = tgt - cur;
+      if (Math.abs(d) < 0.3) { cur = tgt; paint(); return; }
+      cur += d * 0.14; paint(); raf = requestAnimationFrame(tick);
     };
     window.__lite = () => {
       const p = clampN(-run.getBoundingClientRect().top / Math.max(1, runway), 0, 1);
-      tgt = p * (n - 1);
-      if (reduce) { pos = tgt; layout(); return; }
+      tgt = p * travel;
+      if (reduce) { cur = tgt; paint(); return; }
       if (!raf) raf = requestAnimationFrame(tick);
-      if (!drag) { clearTimeout(snapT); snapT = setTimeout(snap, 220); }
     };
+    const runTop = () => run.getBoundingClientRect().top + scrollY();
     const goCard = i => {
       i = clampN(i, 0, n - 1);
-      busy = 1;
-      const y = toScroll(i);
-      if (lenis) lenis.scrollTo(y, { duration: 1.2, onComplete: () => { busy = 0; } });
-      else { window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); setTimeout(() => { busy = 0; }, 900); }
+      const y = runTop() + stops()[i] * (runway / Math.max(1, travel));
+      if (lenis) lenis.scrollTo(y, { duration: 1.2 });
+      else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
     };
     prev.addEventListener('click', () => goCard(idx - 1));
     next.addEventListener('click', () => goCard(idx + 1));
     tabs.forEach((t, j) => t.addEventListener('click', () => goCard(j)));
-    cards.forEach((c, j) => c.addEventListener('click', e => { if (!blockClick && j !== idx && !e.target.closest('a')) goCard(j); }));
 
-    // arraste lateral: converte o deslocamento em scroll
-    let drag = null, blockClick = false;
+    // arraste lateral: converte o deslocamento da pista em rolagem da página
     wheel.addEventListener('pointerdown', e => {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       drag = { x: e.clientX, s: scrollY(), moved: false };
@@ -372,11 +350,11 @@
     window.addEventListener('pointermove', e => {
       if (!drag) return;
       const dx = e.clientX - drag.x;
-      if (!drag.moved && Math.abs(dx) > 6) { drag.moved = true; wheel.classList.add('is-drag'); busy = 1; }
-      if (drag.moved) setScroll(drag.s - (dx / stepX) * perCard());
+      if (!drag.moved && Math.abs(dx) > 6) { drag.moved = true; wheel.classList.add('is-drag'); }
+      if (drag.moved) setScroll(drag.s - dx * (runway / Math.max(1, travel)));
     });
     const end = () => {
-      if (drag && drag.moved) { blockClick = true; setTimeout(() => { blockClick = false; }, 60); busy = 0; window.__lite(); }
+      if (drag && drag.moved) { blockClick = true; setTimeout(() => { blockClick = false; }, 60); }
       drag = null; wheel.classList.remove('is-drag');
     };
     window.addEventListener('pointerup', end);
@@ -384,11 +362,10 @@
     wheel.addEventListener('click', e => { if (blockClick) { e.preventDefault(); e.stopPropagation(); } }, true);
     wheel.addEventListener('dragstart', e => e.preventDefault());
 
-    measure(); layout();
+    measure(); paint();
     window.addEventListener('resize', () => { measure(); window.__lite(); });
     window.addEventListener('load', () => { measure(); window.__lite(); });
   }
-
 
   /* ---------- 7f. Grade interativa no fundo claro ---------- */
   const mountGrid = (parent, cell) => {

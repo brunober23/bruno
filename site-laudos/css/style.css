@@ -784,3 +784,15 @@ html:not(.js) .faq__ac{opacity:1}
 .tdecor--tr{left:auto;top:0;right:0;bottom:auto}
 .tdecor--bl{left:0;top:auto;right:auto;bottom:0}
 .tdecor--br{left:auto;top:auto;right:0;bottom:0}
+
+
+/* ===== Serviços prestados (v3): carrossel horizontal reto ===== */
+.lwheel{display:block;position:relative;width:100%}
+.lwheel__ring{display:none}
+.lwheel__track{display:flex;gap:var(--spacing-24);width:max-content;justify-items:normal;padding-inline:max(var(--gutter),calc((100vw - var(--page-max-width)) / 2));will-change:transform}
+.lcard{grid-area:auto;position:relative;flex:none;transform:none;transition:opacity .4s linear}
+.lcard.is-active .lcard__media img{transform:scale(1.02)}
+.lcard:hover .lcard__media img{transform:scale(1.07)}
+.lite__bar{display:flex;align-items:center;gap:var(--spacing-24);width:100%}
+.lite__rail{flex:1;height:2px;background:var(--lite-line);position:relative;overflow:hidden}
+.lite__fill{position:absolute;inset:0;background:var(--lite-ink);transform:scaleX(0);transform-origin:0 50%}
