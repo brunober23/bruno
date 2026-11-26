@@ -883,3 +883,12 @@ html:not(.js) .faq__ac{opacity:1}
 /* celular: o botão de WhatsApp não se move; o aviso de cookies deixa espaço para ele */
 @media (max-width:860px){html.has-cb .wa-float{bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
 @media (max-width:560px){.cb{right:84px}}
+
+
+/* aviso de cookies: Aceitar e Recusar iguais; "Gerenciar cookies" no rodapé */
+.cb{max-width:520px;flex-direction:column;align-items:stretch;gap:var(--spacing-12)}
+.cb__btns{display:flex;gap:var(--spacing-8)}
+.cb__btns .btn{flex:1}
+.ft__btn{padding:0;color:var(--ft-ink,var(--lite-ink));font:inherit;text-decoration:underline;text-decoration-color:var(--ft-line,var(--lite-line));text-underline-offset:4px;cursor:pointer;transition:text-decoration-color .4s var(--ease-out)}
+.ft__btn:hover{text-decoration-color:currentColor}
+@media (max-width:560px){.cb{right:84px}}

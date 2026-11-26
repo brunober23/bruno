@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Consent Mode v2: tudo negado até o visitante escolher -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});try{if(localStorage.getItem('mastio-cookies')==='granted'){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}}catch(e){}</script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TZC4K56D');</script>
   <!-- End Google Tag Manager -->
@@ -12,18 +14,18 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Laudos Técnicos, Vistorias e Perícias de Engenharia Civil">
   <meta property="og:description" content="Documentação técnica especializada com emissão de ART/CREA, validade jurídica e prazos ágeis.">
-  <meta property="og:image" content="https://sitemastio.vercel.app/assets/img/hero-aerea.jpg">
+  <meta property="og:image" content="https://www.mastio.com.br/assets/img/hero-aerea.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="1200">
   <meta property="og:image:alt" content="Vista aérea de uma obra com estrutura metálica de cobertura">
-  <meta property="og:url" content="https://sitemastio.vercel.app/">
+  <meta property="og:url" content="https://www.mastio.com.br/">
   <meta property="og:site_name" content="Mastio Perícias e Avaliações">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Laudos Técnicos, Vistorias e Perícias de Engenharia Civil">
   <meta name="twitter:description" content="Documentação técnica especializada com emissão de ART/CREA, validade jurídica e prazos ágeis.">
-  <meta name="twitter:image" content="https://sitemastio.vercel.app/assets/img/hero-aerea.jpg">
-  <link rel="canonical" href="https://sitemastio.vercel.app/">
+  <meta name="twitter:image" content="https://www.mastio.com.br/assets/img/hero-aerea.jpg">
+  <link rel="canonical" href="https://www.mastio.com.br/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -38,8 +40,8 @@
     "@type": "ProfessionalService",
     "name": "Mastio Perícias e Avaliações",
     "description": "Laudos técnicos, vistorias cautelares, perícias prediais e avaliação imobiliária de precisão com ART/CREA.",
-    "url": "https://sitemastio.vercel.app/",
-    "image": "https://sitemastio.vercel.app/assets/img/hero-aerea.jpg",
+    "url": "https://www.mastio.com.br/",
+    "image": "https://www.mastio.com.br/assets/img/hero-aerea.jpg",
     "telephone": "+5541996828147",
     "email": "felipegallierisantana@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
@@ -599,15 +601,18 @@
       </div>
       <div class="ft__bar">
         <p>© 2026 Mastio Perícias e Avaliações. Todos os direitos reservados.</p>
-        <p class="ft__legal"><a href="/privacidade.html">Política de privacidade</a><a href="/cookies.html">Aviso de cookies</a></p>
+        <p class="ft__legal"><a href="/privacidade.html">Política de privacidade</a><button class="ft__btn" type="button" data-cb-open>Gerenciar cookies</button></p>
       </div>
     </div>
   </footer>
 
   <a class="wa-float" href="https://wa.me/5541996828147?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20engenheiro." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.8c.2 2.6 3.6 5.9 6.2 6.2l1.2-1.3-2.1-1-.9.7c-.9-.4-1.7-1.2-2.1-2.1l.7-.9-1-2.1z"/></svg></a>
   <div class="cb" id="cookie-banner" role="region" aria-label="Aviso de cookies" hidden>
-    <p class="cb__txt">Usamos cookies para medir o uso do site e melhorar a sua experiência. Saiba mais no <a href="/cookies.html">aviso de cookies</a> e na <a href="/privacidade.html">política de privacidade</a>.</p>
-    <button class="btn btn--primary btn--sm cb__ok" type="button" data-cb-ok>Entendi</button>
+    <p class="cb__txt">Usamos cookies para entender como o site é usado e medir a eficácia dos nossos anúncios. Você escolhe o que aceitar. Saiba mais na <a href="/privacidade.html#cookies">Política de Privacidade</a>.</p>
+    <div class="cb__btns">
+      <button class="btn btn--ghost btn--sm" type="button" data-cb="denied">Recusar</button>
+      <button class="btn btn--ghost btn--sm" type="button" data-cb="granted">Aceitar</button>
+    </div>
   </div>
 
   <script src="assets/vendor/lenis.min.js"></script>
