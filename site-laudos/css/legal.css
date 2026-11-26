@@ -1,0 +1,25 @@
+/* Páginas legais (política de privacidade e aviso de cookies): tema escuro do design system */
+body.legal{background:var(--color-onyx-canvas);color:var(--color-ivory-text);--ft-ink:var(--color-ivory-text);--ft-muted:var(--color-ash-text);--ft-line:var(--color-obsidian-button)}
+.lg-head{border-bottom:1px solid var(--color-obsidian-button)}
+.lg-head__in{display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-16);max-width:var(--page-max-width);margin-inline:auto;padding:var(--spacing-16) var(--gutter)}
+.lg{padding:clamp(48px,8vw,96px) var(--gutter) clamp(72px,10vw,128px)}
+.lg__wrap{max-width:760px;margin-inline:auto}
+.lg__eyebrow{margin:0 0 var(--spacing-12);font-size:var(--text-body-sm);font-weight:480;color:var(--color-cobalt)}
+.lg__h1{margin:0 0 var(--spacing-12);font-family:var(--font-arcadiadisplay);font-weight:480;font-size:clamp(32px,4vw + 8px,var(--text-heading-lg));line-height:1.15;letter-spacing:.01em;text-wrap:balance}
+.lg__upd{margin:0 0 var(--spacing-56);font-size:var(--text-body-sm);color:var(--color-ash-text)}
+.lg__sec{padding:var(--spacing-32) 0;border-top:1px solid var(--color-obsidian-button)}
+.lg__sec h2{margin:0 0 var(--spacing-16);font-family:var(--font-arcadiadisplay);font-weight:480;font-size:var(--text-subheading);line-height:1.3;letter-spacing:.015em}
+.lg__sec p,.lg__sec li{font-size:var(--text-body);line-height:1.65;color:var(--color-ash-text)}
+.lg__sec p{margin:0 0 var(--spacing-12)}
+.lg__sec p:last-child{margin-bottom:0}
+.lg__sec ul{margin:var(--spacing-12) 0;padding-left:var(--spacing-24);list-style:disc}
+.lg__sec li{margin-bottom:var(--spacing-8)}
+.lg__sec b{font-weight:480;color:var(--color-ivory-text)}
+.lg__sec a{color:var(--color-ivory-text);text-decoration:underline;text-underline-offset:4px}
+.lg__sec code{font-size:.92em;padding:2px 6px;border-radius:4px;background:var(--color-obsidian-button);color:var(--color-ivory-text)}
+.lg__table{display:flex;flex-direction:column;border:1px solid var(--color-obsidian-button);border-radius:var(--radius-card);overflow:hidden}
+.lg__row{display:grid;grid-template-columns:.7fr 2.2fr .8fr;gap:var(--spacing-16);padding:var(--spacing-16) var(--spacing-20);font-size:var(--text-body-sm);line-height:1.55;color:var(--color-ash-text)}
+.lg__row+.lg__row{border-top:1px solid var(--color-obsidian-button)}
+.lg__row--h{background:var(--color-graphite-card);color:var(--color-ivory-text);font-weight:480}
+@media (max-width:640px){.lg__row{grid-template-columns:1fr;gap:var(--spacing-4)}.lg__row--h{display:none}}
+.legal :focus-visible{outline:2px solid var(--color-ivory-text);outline-offset:3px;border-radius:4px}

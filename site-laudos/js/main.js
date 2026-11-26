@@ -408,7 +408,6 @@
     parent.addEventListener('pointerleave', () => set(-1));
   };
   mountGrid($('.lite__pin'), 40);
-  mountGrid($('.tmn-sec'), 40);
   mountGrid($('.eng-sec'), 40);
   mountGrid($('.faq-sec'), 40);
 
