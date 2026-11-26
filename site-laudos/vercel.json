@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/cookies.html", "destination": "/privacidade.html#cookies", "permanent": true },
+    { "source": "/cookies", "destination": "/privacidade.html#cookies", "permanent": true }
+  ]
+}
