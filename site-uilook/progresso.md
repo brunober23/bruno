@@ -13,12 +13,12 @@
 
 | Peça | Rodada 1 (B / S / V) | Rodada 2 | Rodada 3 | Rodada 4 | Rodada 5 | Status |
 |---|---|---|---|---|---|---|
-| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | | em correção |
+| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | **pausada no limite** |
 | 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
 | 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
 | 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
 
-Rodadas executadas: 4 de 5.
+Rodadas executadas: 5 de 5 (limite atingido). As peças 2, 3 e 4 foram aprovadas pelos três críticos. A peça 1 tem Briefing e Visual aprovando, e o Sistema ainda reprova. O ciclo está pausado, e a decisão de continuar é do cliente.
 
 ## Histórico das principais lacunas
 
@@ -71,3 +71,13 @@ As peças 2 (Oferta), 3 (Prova) e 4 (Conversão) foram aprovadas pelos três cr�
   - CTA do desktop sem a palavra WhatsApp.
   - Barra do celular sem fio quando passa sobre o Diagnóstico.
 - **Interrupção:** os críticos foram interrompidos pelo limite de uso e retomados depois.
+
+### Rodada 5 (limite atingido)
+- **Primeira dobra:** Briefing APROVADO, Visual APROVADO (melhor que o original) e Sistema REPROVADO.
+  - Principal lacuna do Sistema: o hero não tem o par de botões cheio + contorno ("two-button cluster"). O formulário tem só "Enviar".
+  - Outras alegações do Sistema:
+    - Subtítulo com palavras em ink: é a ênfase por cor, decisão da rodada 2, aceita por Sistemas anteriores.
+    - Tagline "product delivery" no logo: é da marca original.
+    - Separadores "·" na faixa de ferramentas.
+  - Refinos do Visual: separadores pretos fortes demais na faixa e máscara de borda estreita (corte "Ado|b"). H1 4,5px à direita do eixo por causa do tracking negativo.
+- **Verificação:** as peças congeladas (2–4) ficaram idênticas. O diff da rodada 5 mexe só em `<head>`, hero e nav.
