@@ -1,0 +1,11 @@
+{
+  "name": "UiLook — UX Designer sob demanda",
+  "short_name": "UiLook",
+  "description": "Design de UX, UI e IA sob demanda para sites, aplicativos e sistemas.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f6f4",
+  "theme_color": "#f6f6f4",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
