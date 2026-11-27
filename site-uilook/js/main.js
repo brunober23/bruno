@@ -11,7 +11,7 @@
       lenis=new window.Lenis({duration:1.15,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},smoothWheel:true});
       var raf=function(t){lenis.raf(t);requestAnimationFrame(raf)};
       requestAnimationFrame(raf);
-    }catch(e){lenis=null}
+    window.__lenis=lenis}catch(e){lenis=null}
   }
   function goTo(target){
     if(lenis){lenis.scrollTo(target,{offset:-56,duration:1.4})}
@@ -145,7 +145,7 @@
       fabUp=dy<0;lastY=y;
       clearTimeout(idleT);idleT=setTimeout(function(){fabUp=false;update()},3000);
     }
-    if(fab)fab.classList.toggle('show',y>vh*.6&&(fabUp||window.innerWidth>=1024)&&!hidden.contato&&!hidden.rodape&&!hidden.diagnostico);
+    if(fab)fab.classList.toggle('show',y>vh*.6&&!hidden.contato&&!hidden.rodape&&!(hidden.diagnostico&&window.innerWidth>=1024));
   }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
   window.addEventListener('scroll',onScroll,{passive:true});
