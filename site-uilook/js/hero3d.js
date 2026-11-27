@@ -21,7 +21,7 @@ function init() {
   canvas.setAttribute('aria-hidden', 'true');
   host.appendChild(canvas);
 
-  /* --- warm studio environment (dark room, cream light strips, one yellow glint) --- */
+  /* --- warm studio environment (dark room, cream light strips, one purple glint) --- */
   const env = new THREE.Scene();
   env.add(new THREE.Mesh(new THREE.BoxGeometry(12, 12, 12), new THREE.MeshBasicMaterial({ color: 0x15150f, side: THREE.BackSide })));
   const strip = (w, h, x, y, z, color, power) => {
@@ -32,7 +32,7 @@ function init() {
   strip(1.6, 7, -5.6, 0.4, 0.8, 0xffffff, 5.0);  // left strip
   strip(2.2, 6, 5.4, -0.2, 1.8, 0xf6f6f4, 4.0);  // right strip
   strip(6, 0.9, 0, -5.0, 2.6, 0xe8e7d9, 2.4);    // floor bounce
-  strip(0.5, 1.2, 3.6, 3.2, -3.8, 0xfff347, 2.2); // small yellow glint
+  strip(0.6, 1.4, 3.6, 3.2, -3.8, 0x7a52c7, 3.0); // small purple glint
   strip(4, 4, 0, 0, -5.8, 0x57584b, 0.6);        // back fill (olive)
   const pmrem = new THREE.PMREMGenerator(renderer);
   const envTex = pmrem.fromScene(env, 0.035).texture;

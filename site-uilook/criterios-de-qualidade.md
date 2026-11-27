@@ -12,7 +12,7 @@ durante a rolagem).
    rótulos, corpo, formulários, rodapé) é monoespaçado de 12–16px. Toda seção tem um rótulo
    mono de 12px em caixa-alta acima do título.
 
-2. **Um único amarelo, como marca-texto.** O #fff347 aparece no máximo 4 vezes por viewport e
+2. **Um único roxo, como marca-texto.** O #2D0567 (ou #a68ce0 sobre carbono) aparece no máximo 4 vezes por viewport e
    só como traço de 2–6px ou bloco pequeno (≤ 120px de largura) ou sublinhado/realce atrás de
    uma palavra. Nunca como cor de texto, fundo de seção ou preenchimento de botão. Todo o resto
    é tinta, carbono e oliva-sálvia quentes sobre creme #f6f6f4. Nenhum cinza frio ou azul.
@@ -40,7 +40,7 @@ durante a rolagem).
 6. **Imagem editorial, um só tratamento.** Todas as fotos usam o mesmo tratamento: dessaturadas,
    quentes e claras, com o mesmo filtro, proporção fixa (1:1, 4:3 ou 3:4), raio de 8px e fio de
    1px. O visual do hero é um objeto 3D sobre quadriculado de transparência, com barras de
-   acento preta (2px) e amarela (4px). Nenhuma foto aparece crua e saturada ao lado de outra
+   acento preta (2px) e roxa (4px). Nenhuma foto aparece crua e saturada ao lado de outra
    tratada.
 
 7. **Responsivo sem concessão.** Em 390px não há rolagem horizontal. Nenhuma palavra do H1 é

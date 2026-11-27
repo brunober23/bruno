@@ -3,13 +3,15 @@ name: "design-system-uilook-oficial"
 ---
 
 # Visual — Style Reference
-> Warm editorial zine. Cream paper, serif posters, mono marginalia, a single yellow highlighter mark.
+
+> **Atualização UiLook (27/11/2026):** a cor de destaque amarela (#fff347) foi substituída pelo roxo **#2D0567**. Em superfícies escuras (carbon), usar a variação clara **#a68ce0** para que a marca continue visível.
+> Warm editorial zine. Cream paper, serif posters, mono marginalia, a single purple accent mark.
 
 **Theme:** light
 
 Source measurements are normalized; roles and recommendations are interpreted. Font summary lists are independent, not paired by position. HTML examples are reconstructions, not source components.
 
-Visual speaks an editorial design dialect: a warm cream canvas (#f6f6f4) holds a high-contrast modern serif at near-poster sizes (64–96px) paired with monospaced UI text at 12–16px. The palette is near-monochrome — warm blacks, olive-sage neutrals, and a single vivid yellow (#fff347) deployed as decorative punctuation on accent bars and highlight washes. Surfaces stay flat with hairline 1px borders; visual hierarchy comes from color contrast and generous 80px section gaps, never from shadows. Components are lightweight and geometric: 8px-radius cards, 3px-radius nav, tiny all-caps mono labels, and a neutral dark button that reads as 'next' rather than 'buy now'. The overall feel is a design museum catalog that happens to contain a product — confident, restrained, and slightly cerebral.
+Visual speaks an editorial design dialect: a warm cream canvas (#f6f6f4) holds a high-contrast modern serif at near-poster sizes (64–96px) paired with monospaced UI text at 12–16px. The palette is near-monochrome — warm blacks, olive-sage neutrals, and a single deep purple (#2D0567) deployed as decorative punctuation on accent bars and highlight washes. Surfaces stay flat with hairline 1px borders; visual hierarchy comes from color contrast and generous 80px section gaps, never from shadows. Components are lightweight and geometric: 8px-radius cards, 3px-radius nav, tiny all-caps mono labels, and a neutral dark button that reads as 'next' rather than 'buy now'. The overall feel is a design museum catalog that happens to contain a product — confident, restrained, and slightly cerebral.
 
 ## Tokens — Colors
 
@@ -25,7 +27,7 @@ Visual speaks an editorial design dialect: a warm cream canvas (#f6f6f4) holds a
 | Sage | `#979886` | `--color-sage` | Nav link text, muted UI labels, breadcrumb text |
 | Moss | `#aaab9c` | `--color-moss` | Icon strokes and fills, tertiary text, decorative icon tint |
 | Bone | `#e8e7d9` | `--color-bone` | Subtle warm tint surface for tag backgrounds, soft highlight washes |
-| Highlighter Yellow | `#fff347` | `--color-highlighter-yellow` | Single accent — decorative bars, highlight washes, emphasis marks. Appears 3–4 times per page maximum, always as a 4–6px stroke or small fill block |
+| Roxo UiLook | `#2D0567` | `--color-roxo-uilook` | Single accent — decorative bars, highlight washes, emphasis marks. Appears 3–4 times per page maximum, always as a 4–6px stroke or small fill block |
 | Khaki Olive | `#aaa674` | `--color-khaki-olive` | Muted accent for tag borders, secondary button outlines, warm-tinted surface washes — the restrained sibling of the highlighter |
 
 ## Tokens — Typography
@@ -131,7 +133,7 @@ Two equal panels side by side, each on #ffffff with 1px #d0d0c8 border and 8px r
 ### Dark Product Panel
 **Role:** Product UI showcase with dark background
 
-Inner card with #2c2c26 background, 8px radius, 1px #57584b border. Contains product UI mockup (chat bubbles, file attachments, status indicators) rendered in #d0d0c8 and #aaab9c. Accent: #fff347 appears as a small highlight on the agent avatar or status dot.
+Inner card with #2c2c26 background, 8px radius, 1px #57584b border. Contains product UI mockup (chat bubbles, file attachments, status indicators) rendered in #d0d0c8 and #aaab9c. Accent: #2D0567 appears as a small highlight on the agent avatar or status dot.
 
 ### Blog Card
 **Role:** Article preview in blog grid
@@ -144,9 +146,9 @@ Inner card with #2c2c26 background, 8px radius, 1px #57584b border. Contains pro
 Full-width #2c2c26 background, text #ffffff and #979886. Three-column layout: VISUAL wordmark left, RESOURCES and COMPANY link columns center/right, WAITLIST button far right. Mono 14px links, 12px headings. Padding 64px vertical. No border-top — the color shift from #f6f6f4 to #2c2c26 is the separator.
 
 ### Accent Bar Decoration
-**Role:** Decorative yellow + black line clusters
+**Role:** Decorative purple + black line clusters
 
-Horizontal composition of 2–3 thin bars: one 2px #000000 stroke, one 4px #fff347 stroke, varying widths (40–120px). Positioned as decorative accents near hero visuals or section transitions. Not a functional element — pure editorial punctuation.
+Horizontal composition of 2–3 thin bars: one 2px #000000 stroke, one 4px #2D0567 stroke, varying widths (40–120px). Positioned as decorative accents near hero visuals or section transitions. Not a functional element — pure editorial punctuation.
 
 ### Olive Tag/Badge
 **Role:** Category tag, status indicator
@@ -156,7 +158,7 @@ Background transparent or #e8e7d9, border 1px #aaa674, text #6d6e5, mono 12px we
 ### Checkerboard Hero Visual
 **Role:** 3D-rendered hero centerpiece
 
-A photorealistic 3D render (chrome/metallic organic form — resembles a heart or molar shape) placed over a transparent checkerboard pattern. The checkerboard signals 'this is a 3D asset, not a photograph' and echoes design-tool transparency grids. Accent bars in #fff347 and #000000 overlay at left and right.
+A photorealistic 3D render (chrome/metallic organic form — resembles a heart or molar shape) placed over a transparent checkerboard pattern. The checkerboard signals 'this is a 3D asset, not a photograph' and echoes design-tool transparency grids. Accent bars in #2D0567 and #000000 overlay at left and right.
 
 ## Do's and Don'ts
 
@@ -166,17 +168,17 @@ A photorealistic 3D render (chrome/metallic organic form — resembles a heart o
 - Pair the neutral filled button (#2c2c26 fill, #ffffff text) with the ghost outline button (1px #000000 border) — they always appear as a 2-button cluster with 8px gap
 - Use mono at 12–16px with tracking -0.067em for all UI text, nav, buttons, and body copy — this creates the terminal/code-margin feel
 - Separate sections with 80px vertical gaps, not with borders or background color shifts — the whitespace is the structure
-- Place the #fff347 accent as 2–4px strokes or small fill blocks (max ~120px wide), never as large fills or backgrounds
+- Place the #2D0567 accent as 2–4px strokes or small fill blocks (max ~120px wide), never as large fills or backgrounds
 - Use 8px radius on cards and 3px radius on buttons, tags, and nav elements — the radius contrast is deliberate
 
 ### Don't
 - Don't use pure #ffffff as the page background — always #f6f6f4 for the warm cream canvas
 - Don't add drop shadows to cards or buttons — the system is intentionally flat, separation comes from 1px borders and color contrast
 - Don't use the serif at body sizes (16px or below) — it is a display-only face; body copy must be mono
-- Don't apply #fff347 to text, large backgrounds, or filled buttons — it is a decorative accent only, not an action color
+- Don't apply #2D0567 to text, large backgrounds, or filled buttons — it is a decorative accent only, not an action color
 - Don't use cool grays (blues or true neutrals) — the entire palette runs warm: olive-sage tones, warm blacks (#2c2c26 not #000000 for surfaces), and cream whites
 - Don't use gradients — the system is flat color only, with the one exception of the 3D hero render which contains its own internal gradients
-- Don't exceed 4 instances of #fff347 per screen — the accent loses impact if it appears more than 3–4 times on a single page
+- Don't exceed 4 instances of #2D0567 per screen — the accent loses impact if it appears more than 3–4 times on a single page
 
 ## Surfaces
 
@@ -185,7 +187,7 @@ A photorealistic 3D render (chrome/metallic organic form — resembles a heart o
 | 0 | Vellum | `#f6f6f4` | Page background — the warm cream that defines the entire visual temperature |
 | 1 | Paper | `#ffffff` | Card surfaces, elevated content blocks, light product mockup panels |
 | 2 | Carbon | `#2c2c26` | Dark panels, product screenshot cards, footer, neutral filled buttons |
-| 3 | Highlighter | `#fff347` | Accent highlight washes — appears as small decorative fills, never large surfaces |
+| 3 | Roxo | `#2D0567` | Accent highlight washes — appears as small decorative fills, never large surfaces |
 | 4 | Bone | `#e8e7d9` | Subtle warm tint for tag backgrounds and soft highlight zones |
 
 ## Elevation
@@ -194,7 +196,7 @@ The system is intentionally flat. No drop shadows exist anywhere — visual hier
 
 ## Imagery
 
-Imagery is sparse and editorial. The hero features a single photorealistic 3D render — a chrome/metallic organic form (resembling a heart or molar) with reflective surface treatment, placed over a transparency-grid checkerboard pattern that signals '3D asset' rather than 'photograph'. The checkerboard is a design-tool convention used here as aesthetic. Accent bars (2–4px strokes in #fff347 and #000000) overlay the hero as decorative punctuation. Blog cards use square or 4:3 editorial photography with a slightly desaturated, high-key treatment. No lifestyle photography, no stock imagery, no product screenshots in the marketing sense — only the 3D render and editorial blog photos. Icons are minimal mono-weight geometric marks, not illustrations.
+Imagery is sparse and editorial. The hero features a single photorealistic 3D render — a chrome/metallic organic form (resembling a heart or molar) with reflective surface treatment, placed over a transparency-grid checkerboard pattern that signals '3D asset' rather than 'photograph'. The checkerboard is a design-tool convention used here as aesthetic. Accent bars (2–4px strokes in #2D0567 and #000000) overlay the hero as decorative punctuation. Blog cards use square or 4:3 editorial photography with a slightly desaturated, high-key treatment. No lifestyle photography, no stock imagery, no product screenshots in the marketing sense — only the 3D render and editorial blog photos. Icons are minimal mono-weight geometric marks, not illustrations.
 
 ## Layout
 
@@ -208,7 +210,7 @@ Page model is max-width 1200px centered, with full-bleed sections inside that co
 - card surface: #ffffff
 - border: #d0d0c8
 - dark surface: #2c2c26
-- accent: #fff347
+- accent: #2D0567
 - primary action: #2c2c26 (filled action)
 
 **Example Component Prompts**
@@ -248,7 +250,7 @@ Page model is max-width 1200px centered, with full-bleed sections inside that co
   --color-sage: #979886;
   --color-moss: #aaab9c;
   --color-bone: #e8e7d9;
-  --color-highlighter-yellow: #fff347;
+  --color-roxo-uilook: #2D0567;
   --color-khaki-olive: #aaa674;
 
   /* Typography — Font Families */
@@ -321,7 +323,7 @@ Page model is max-width 1200px centered, with full-bleed sections inside that co
   --surface-vellum: #f6f6f4;
   --surface-paper: #ffffff;
   --surface-carbon: #2c2c26;
-  --surface-highlighter: #fff347;
+  --surface-roxo: #2D0567;
   --surface-bone: #e8e7d9;
 }
 ```
@@ -341,7 +343,7 @@ Page model is max-width 1200px centered, with full-bleed sections inside that co
   --color-sage: #979886;
   --color-moss: #aaab9c;
   --color-bone: #e8e7d9;
-  --color-highlighter-yellow: #fff347;
+  --color-roxo-uilook: #2D0567;
   --color-khaki-olive: #aaa674;
 
   /* Typography */
