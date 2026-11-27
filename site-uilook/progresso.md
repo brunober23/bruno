@@ -13,12 +13,12 @@
 
 | Peça | Rodada 1 (B / S / V) | Rodada 2 | Rodada 3 | Rodada 4 | Rodada 5 | Status |
 |---|---|---|---|---|---|---|
-| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | | | | em correção |
-| 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | | em correção |
-| 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | | em correção |
-| 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | | em correção |
+| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
+| 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
+| 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
+| 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | em correção |
 
-Rodadas executadas: 2 de 5.
+Rodadas executadas: 3 de 5.
 
 ## Histórico das principais lacunas
 
@@ -39,3 +39,21 @@ Na comparação cega, o Crítico Visual escolheu o novo site como melhor nas 4 p
   - O Sistema alegou que a foto de banco era proibida. Isso foi descartado: as imagens do Unsplash são um pedido explícito do cliente. O botão branco sobre carbono também foi descartado: é a variante do rodapé prevista no próprio sistema.
 - **Prova:** reprovada só pelo Sistema. Os 4 botões do FAQ têm raio 0 e os títulos de cartão 32px têm line-height 1.2. O Visual pediu, sem reprovar, para alinhar a grade do Fundador e evitar a palavra órfã no H2 de Números no celular.
 - **Conversão:** reprovada pelo Sistema e pelo Visual. No desktop não há CTA fixo, porque o botão flutuante não aparece. A foto do Contato tem proporção 2,07:1 e muda entre telas. O rodapé no celular tem 80px de padding inferior, e o sistema pede 64px.
+
+### Rodada 3
+O Briefing aprovou as 4 peças e o Visual aprovou as peças 1, 2 e 3. O Sistema reprovou as 4.
+- **Conversão:** o Visual reprovou porque, no celular, o botão flutuante (42×42) fica dentro da coluna e cobre o título "Experiência do usuário (UX)". Correção: barra fixa inferior no celular, com espaço reservado.
+- **Sistema:**
+  - Fotos escuras: luminância média de 88 a 113, e o sistema pede *high-key*. Meta: ≥ 150 em cada foto, com o mesmo tratamento monocromático. O tratamento único foi mantido por causa do critério 6.
+  - Botões com 44–48px, contra o padding 8×16 do sistema (~37px). Conflito com o alvo de toque de 44px do critério 7. Decisão: padding do sistema no desktop e mínimo de 44px só em telas de toque.
+  - Barra direita do hero sem amarelo.
+  - H1 de 48px no celular, contra 64–96 no sistema.
+  - Cabeçalho de Soluções alinhado à esquerda. Será centralizado. O Contato fica como layout dividido, que o sistema permite.
+  - Ícones do fundador em preto. Passam para lichen.
+- **Refinos do Visual, sem reprovação:**
+  - Pilha de Serviços cortando frase e recuos desiguais.
+  - Linhas de ~95 caracteres na bio.
+  - "36" fora do recuo da grade de Números.
+  - Foto do Contato empurrando o formulário no celular.
+  - Rodapé desorganizado.
+- **Captura:** os quadros `m-fab-*` e `d-faq-0` mostraram a seção errada por conflito com o Lenis. O script foi corrigido.
