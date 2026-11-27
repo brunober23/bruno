@@ -700,3 +700,6 @@ p{text-wrap:pretty}
 
 /* purple accent on dark surfaces: lighter tint so the mark stays visible */
 .diag-panel .price-fig::after,.footer .hl::after,.mock--dark .av::after{background:var(--purple-light)}
+/* founder photo: stronger contrast (no washed-out lift) */
+.founder-ph .photo{filter:grayscale(1) sepia(.06) contrast(1.18) brightness(1.04)}
+.founder-ph .ph::after{display:none}
