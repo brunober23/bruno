@@ -13,12 +13,12 @@
 
 | Peça | Rodada 1 (B / S / V) | Rodada 2 | Rodada 3 | Rodada 4 | Rodada 5 | Status |
 |---|---|---|---|---|---|---|
-| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
-| 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
-| 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | | | em correção |
-| 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | em correção |
+| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | | em correção |
+| 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
+| 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | APROVADO / REPROVADO / APROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
+| 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | **APROVADO / APROVADO / APROVADO** | — | **aprovada** |
 
-Rodadas executadas: 3 de 5.
+Rodadas executadas: 4 de 5.
 
 ## Histórico das principais lacunas
 
@@ -57,3 +57,17 @@ O Briefing aprovou as 4 peças e o Visual aprovou as peças 1, 2 e 3. O Sistema 
   - Foto do Contato empurrando o formulário no celular.
   - Rodapé desorganizado.
 - **Captura:** os quadros `m-fab-*` e `d-faq-0` mostraram a seção errada por conflito com o Lenis. O script foi corrigido.
+
+### Rodada 4
+As peças 2 (Oferta), 3 (Prova) e 4 (Conversão) foram aprovadas pelos três críticos e não voltam mais ao Construtor. Na comparação cega, o Visual preferiu o novo site nas 4 peças.
+- **Primeira dobra:** reprovada só pelo Sistema. A 2ª linha do H1 está em lichen (#6d6e5e), e o sistema define títulos serifados em #000. O lichen tinha sido uma instrução da própria rodada 2.
+  - Refinos do Visual: centralizar os links da nav no eixo da página (hoje estão 26px fora) e deixar o parallax do orbe perceptível (hoje ~11px).
+  - Nota do Briefing: a imagem OG não combina com o hero. Correção: `og-uilook.jpg` gerada com o orbe sobre o quadriculado.
+- **Refinos registrados para depois, sem reprovação:**
+  - Cartão 02 de Serviços com título e texto desconectados no desktop.
+  - Foto do MLP de banco de imagens. Seria melhor usar telas reais do trabalho.
+  - Exposição desigual entre fotos (Contato mediana 246 contra 147).
+  - Base do rodapé desalinhada.
+  - CTA do desktop sem a palavra WhatsApp.
+  - Barra do celular sem fio quando passa sobre o Diagnóstico.
+- **Interrupção:** os críticos foram interrompidos pelo limite de uso e retomados depois.
