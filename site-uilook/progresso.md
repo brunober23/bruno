@@ -13,12 +13,12 @@
 
 | Peça | Rodada 1 (B / S / V) | Rodada 2 | Rodada 3 | Rodada 4 | Rodada 5 | Status |
 |---|---|---|---|---|---|---|
-| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | | | | | em correção |
-| 2. Oferta | APROVADO / REPROVADO / REPROVADO | | | | | em correção |
-| 3. Prova | APROVADO / REPROVADO / REPROVADO | | | | | em correção |
-| 4. Conversão | APROVADO / REPROVADO / REPROVADO | | | | | em correção |
+| 1. Primeira dobra | APROVADO / REPROVADO / REPROVADO | REPROVADO / APROVADO / REPROVADO | | | | em correção |
+| 2. Oferta | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | | em correção |
+| 3. Prova | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / APROVADO | | | | em correção |
+| 4. Conversão | APROVADO / REPROVADO / REPROVADO | APROVADO / REPROVADO / REPROVADO | | | | em correção |
 
-Rodadas executadas: 1 de 5.
+Rodadas executadas: 2 de 5.
 
 ## Histórico das principais lacunas
 
@@ -31,3 +31,11 @@ Na comparação cega, o Crítico Visual escolheu o novo site como melhor nas 4 p
   - Correção: foto real do site original.
   - O FAQ salta de altura e os botões têm 32px no celular. Os fios dos Números descolam na cascata e a foto do MLP não alinha à grade.
 - **Conversão:** o botão flutuante cobre conteúdo e some sobre fundo escuro (Visual). O marca-texto amarelo do rodapé tem 226px (o limite é 120) e há ~104px entre o contato e o rodapé (Sistema). Os títulos de coluna do rodapé são H2 (Briefing).
+
+### Rodada 2
+Na comparação cega, o Crítico Visual escolheu o novo site como melhor nas 4 peças de novo.
+- **Primeira dobra:** reprovada pelo Briefing e pelo Visual. O link do logo tem 79×24px no celular. O loop de ferramentas corta letras nas bordas, sem esmaecimento. O alt do orbe ainda fala em "reflexos quentes".
+- **Oferta:** reprovada pelo Sistema e pelo Visual. Serviços e Soluções repetem o mesmo trio com listas quase iguais, cerca de 2.400px de redundância, e Soluções precisa de outra forma. O hover do botão cheio quase não aparece. As fotos estão escuras, e o sistema pede dessaturadas e *high-key*.
+  - O Sistema alegou que a foto de banco era proibida. Isso foi descartado: as imagens do Unsplash são um pedido explícito do cliente. O botão branco sobre carbono também foi descartado: é a variante do rodapé prevista no próprio sistema.
+- **Prova:** reprovada só pelo Sistema. Os 4 botões do FAQ têm raio 0 e os títulos de cartão 32px têm line-height 1.2. O Visual pediu, sem reprovar, para alinhar a grade do Fundador e evitar a palavra órfã no H2 de Números no celular.
+- **Conversão:** reprovada pelo Sistema e pelo Visual. No desktop não há CTA fixo, porque o botão flutuante não aparece. A foto do Contato tem proporção 2,07:1 e muda entre telas. O rodapé no celular tem 80px de padding inferior, e o sistema pede 64px.
