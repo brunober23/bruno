@@ -145,7 +145,7 @@
       fabUp=dy<0;lastY=y;
       clearTimeout(idleT);idleT=setTimeout(function(){fabUp=false;update()},3000);
     }
-    if(fab)fab.classList.toggle('show',y>vh*.6&&fabUp&&!hidden.contato&&!hidden.rodape&&!hidden.diagnostico);
+    if(fab)fab.classList.toggle('show',y>vh*.6&&(fabUp||window.innerWidth>=1024)&&!hidden.contato&&!hidden.rodape&&!hidden.diagnostico);
   }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
   window.addEventListener('scroll',onScroll,{passive:true});
