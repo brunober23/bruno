@@ -81,3 +81,22 @@ As peças 2 (Oferta), 3 (Prova) e 4 (Conversão) foram aprovadas pelos três cr�
     - Separadores "·" na faixa de ferramentas.
   - Refinos do Visual: separadores pretos fortes demais na faixa e máscara de borda estreita (corte "Ado|b"). H1 4,5px à direita do eixo por causa do tracking negativo.
 - **Verificação:** as peças congeladas (2–4) ficaram idênticas. O diff da rodada 5 mexe só em `<head>`, hero e nav.
+
+## Rodada 6 — pedido do cliente: imagens e animação do hero no estilo de visual.app (fora do ciclo de críticos)
+- **Hero:** forma 3D de cromo líquido feita em three.js com shader próprio. Ela muda de forma continuamente, segue o cursor, se agita no hover, ondula no clique e reage à rolagem. Fica sobre uma mancha orgânica de quadriculado que também se deforma e tem barras segmentadas com efeito glitch. Com movimento reduzido ou sem WebGL, aparece o orbe estático.
+- **Imagens:** as fotos do Unsplash foram trocadas por mockups de interface animados e originais, desenhados para a UiLook:
+  - mapa de jornada (UX)
+  - design system (UI)
+  - chat com agente de IA (IA)
+  - app de restaurantes num celular que alterna de MVP para MLP (MLP)
+  - conversa de WhatsApp (Contato)
+  - A foto real do fundador continua, agora numa moldura quadriculada com cantoneiras.
+- **Mais dinamismo:**
+  - grade pontilhada com parallax e cantoneiras que se desenham nas seções
+  - rótulos com efeito de embaralhar
+  - botões magnéticos e mockups com inclinação 3D
+  - faixa de ferramentas com velocidade e direção ligadas à rolagem
+  - cartões de Serviços que encolhem ao empilhar
+  - painel do Diagnóstico que se abre com a rolagem
+  - réguas desenhadas sob os números
+- **Decisão:** os arquivos de visual.app (capturas de produto, posts do blog e o código do hero) não foram copiados. Eles são propriedade da Visual e mostrariam o produto de outra empresa. A linguagem visual foi recriada com peças próprias.

@@ -29,10 +29,11 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" as="image" href="assets/img/orbe-cromado.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.uilook.com.br/#organization","name":"UiLook","url":"https://www.uilook.com.br/","logo":"https://www.uilook.com.br/favicon.svg","image":"https://www.uilook.com.br/assets/img/og-uilook.jpg","description":"UiLook é um estúdio de UX Designer sob demanda: design de UX, UI e inteligência artificial para sites, aplicativos e sistemas, em pacotes por hora. Fale agora.","sameAs":["https://www.linkedin.com/company/uilook/","https://www.instagram.com/uilook.digital"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+55 41 99807-3814","areaServed":"BR","availableLanguage":"pt-BR"},"areaServed":"BR","founder":{"@id":"https://www.uilook.com.br/#bruno"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Serviços de design UiLook","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Experiência do usuário (UX Design)","description":"Benchmarking, wireframes, análise de jornada do usuário, sitemaps e testes de usabilidade para validar ideias."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Interface do usuário (UI Design)","description":"Design visual completo, layout responsivo, protótipos navegáveis e identidade visual aplicada a produtos digitais."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Inteligência Artificial (IA) em produtos digitais","description":"Personalização de experiência do usuário, integração de IA em produtos digitais, microsaas inteligente e consultoria especializada."}},{"@type":"Offer","price":"129.90","priceCurrency":"BRL","url":"https://buy.stripe.com/14A7sMa6y5cK8Db0RZ5c400","availability":"https://schema.org/InStock","itemOffered":{"@type":"Service","name":"Diagnóstico UX/UI","description":"Diagnóstico completo de um produto digital existente, com prazo médio de até 48 horas e proposta de plano de ação."}}]}},{"@type":"WebSite","@id":"https://www.uilook.com.br/#website","url":"https://www.uilook.com.br/","name":"UiLook","inLanguage":"pt-BR","publisher":{"@id":"https://www.uilook.com.br/#organization"}},{"@type":"WebPage","@id":"https://www.uilook.com.br/#webpage","url":"https://www.uilook.com.br/","name":"UX Designer sob demanda | Design de UI, UX e IA — UiLook","description":"UiLook é um estúdio de UX Designer sob demanda: design de UX, UI e inteligência artificial para sites, aplicativos e sistemas, em pacotes por hora. Fale agora.","inLanguage":"pt-BR","isPartOf":{"@id":"https://www.uilook.com.br/#website"},"about":{"@id":"https://www.uilook.com.br/#organization"}},{"@type":"Person","@id":"https://www.uilook.com.br/#bruno","name":"Bruno Bernardes","jobTitle":"Fundador e Designer","worksFor":{"@id":"https://www.uilook.com.br/#organization"},"sameAs":["https://www.linkedin.com/in/bernardesbruno/"]},{"@type":"FAQPage","@id":"https://www.uilook.com.br/#faq","mainEntity":[{"@type":"Question","name":"Por que devo ter um produto digital?","acceptedAnswer":{"@type":"Answer","text":"Um produto digital pode transformar a maneira como sua empresa interage com clientes e melhora processos internos. Com um produto digital, como aplicativos ou plataformas, você pode escalar sua operação, oferecer soluções inovadoras e personalizadas e aumentar o engajamento do usuário. No cenário atual, a presença digital é essencial para empresas que desejam se manter competitivas e relevantes. Ao investir em um produto digital, você cria uma nova forma de entregar valor aos clientes e abrir novas fontes de receita."}},{"@type":"Question","name":"Qualquer empresa pode ter um produto digital?","acceptedAnswer":{"@type":"Answer","text":"Sim, qualquer empresa, independentemente do porte ou setor, pode ter um produto digital. O importante é identificar qual tipo de solução digital atende melhor às necessidades do seu negócio e dos seus clientes. Desde pequenas empresas até grandes corporações, os produtos digitais permitem automatizar processos, melhorar a experiência do cliente e expandir a presença no mercado. Consultorias especializadas como o da UiLook ajudam você a encontrar o melhor caminho para explorar o mundo digital de forma eficaz."}},{"@type":"Question","name":"Por que o UX/UI é importante para um produto digital?","acceptedAnswer":{"@type":"Answer","text":"UX (Experiência do Usuário) e UI (Interface do Usuário) são cruciais para o sucesso de um produto digital. O design centrado no usuário garante que o produto seja intuitivo, fácil de usar e ofereça uma experiência agradável. Uma boa interface e experiência do usuário não só aumentam o engajamento, mas também ajudam a reduzir a taxa de desistência e aumentam a satisfação do cliente. Investir em UX/UI faz com que o seu produto digital se destaque no mercado, oferecendo soluções que atendem às necessidades do usuário."}},{"@type":"Question","name":"Por que devo validar o produto no mercado?","acceptedAnswer":{"@type":"Answer","text":"A validação de um produto no mercado é essencial para garantir que ele atenda às necessidades reais dos usuários e tenha viabilidade comercial. Validar o produto antes de seu lançamento completo ajuda a identificar possíveis ajustes, minimizando riscos e economizando recursos. Testar o conceito com seu público-alvo permite receber feedback valioso e assegurar que a solução desenvolvida está alinhada com as expectativas e dores dos clientes, aumentando as chances de sucesso."}}]}]}</script>
 </head>
 <body>
@@ -76,8 +77,14 @@
     <p class="form-ok" role="status" hidden></p>
     </div>
     <div class="hero-visual" id="hero-visual" data-reveal style="--d:200ms">
-      <div class="hv-orb"><img class="orb" src="assets/img/orbe-cromado.webp" width="600" height="599" alt="Orbe 3D cromado em tons neutros sobre quadriculado de transparência, símbolo do design de produtos digitais da UiLook" loading="eager" fetchpriority="high" decoding="async"></div>
-      <div class="hv-bars" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
+      <svg class="hv-blob" id="hv-blob" aria-hidden="true" focusable="false"><defs><pattern id="hv-chk" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#ffffff"/><rect width="12" height="12" fill="#e8e7d9"/><rect x="12" y="12" width="12" height="12" fill="#e8e7d9"/></pattern></defs><path class="blob-main" fill="url(#hv-chk)"/><path class="blob-sat" fill="url(#hv-chk)"/></svg>
+      <div class="hv-3d" id="hero-3d" role="img" aria-label="Forma 3D cromada e líquida que se transforma continuamente sobre um quadriculado de transparência, símbolo do design de produtos digitais da UiLook">
+        <img class="orb" src="assets/img/orbe-cromado.webp" width="600" height="599" alt="" loading="eager" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hv-glitch g1" aria-hidden="true"><i class="k"></i><i class="o"></i><i class="y"></i></div>
+      <div class="hv-glitch g2" aria-hidden="true"><i class="y"></i><i class="k"></i><i class="o"></i></div>
+      <div class="hv-glitch g3" aria-hidden="true"><i class="k"></i><i class="o"></i><i class="y"></i><i class="k"></i></div>
+      <p class="hv-hint" aria-hidden="true"><span>Mova o cursor</span><span>Clique para agitar</span></p>
     </div>
   </div>
 </section>
@@ -97,7 +104,7 @@
   </div>
 </section>
 
-<section class="sec" id="servicos" aria-labelledby="h-serv">
+<section class="sec" data-frame id="servicos" aria-labelledby="h-serv">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-reveal>Serviços</p>
@@ -107,24 +114,55 @@
     <div class="svc-stack">
       <article class="card svc" style="--i:0">
         <div class="svc-h" data-reveal><span class="tag">01 · UX</span><h3 class="serif t-32">Experiência do usuário (UX)</h3></div>
-        <div class="svc-in"><div class="svc-body" data-reveal><p>Benchmarking, wireframes e testes de usabilidade para entender como as pessoas usam o seu produto.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
-        <div class="ph" data-reveal><img class="photo" style="--r:4/3" src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&h=600&q=75" srcset="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=480&h=360&q=75 480w, https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&h=600&q=75 800w, https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&h=900&q=75 1200w" sizes="(min-width:960px) 460px, 100vw" width="1200" height="900" alt="Mão desenhando um wireframe de interface em papel, etapa de UX design" loading="lazy" decoding="async"></div></div>
+        <div class="svc-in"><div class="svc-body" data-reveal><span class="svc-idx serif" aria-hidden="true">01</span><p>Benchmarking, wireframes e testes de usabilidade para entender como as pessoas usam o seu produto.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
+        <div class="svc-mock" data-reveal><div class="mock mk-ux" data-mock role="img" aria-label="Ilustração animada de um mapa de jornada do usuário: etapas de descoberta, cadastro, primeira compra e retorno, conectadas por um fluxo, com uma nota de pesquisa e um teste de usabilidade em andamento">
+            <div class="mk-win" data-depth="1"><div class="mk-bar"><span class="mk-path">projeto / ux / jornada-do-usuario</span><span class="mk-live"><i></i>ao vivo</span></div>
+              <div class="ux-canvas">
+                <svg class="ux-lines" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true"><path class="ux-path" pathLength="1" d="M48 56 C 140 56, 120 176, 200 176 S 270 56, 352 64"/><path class="ux-path ux-path2" pathLength="1" d="M352 64 C 380 120, 340 200, 300 210"/></svg>
+                <span class="ux-node" style="--x:4%;--y:14%;--k:0"><b>01</b>Descoberta</span>
+                <span class="ux-node" style="--x:30%;--y:64%;--k:1"><b>02</b>Cadastro</span>
+                <span class="ux-node" style="--x:66%;--y:16%;--k:2"><b>03</b>Primeira compra</span>
+                <span class="ux-node" style="--x:60%;--y:78%;--k:3"><b>04</b>Retorno</span>
+                <span class="ux-note" data-depth="2">“Não encontrei onde finalizar o cadastro”</span>
+                <span class="mk-cursor" aria-hidden="true"></span>
+              </div>
+              <div class="ux-test"><span>Teste de usabilidade</span><span class="ux-meter"><i></i></span></div>
+            </div>
+          </div></div></div>
       </article>
       <article class="card svc flip" style="--i:1">
         <div class="svc-h" data-reveal><span class="tag">02 · UI</span><h3 class="serif t-32">Interface (UI)</h3></div>
-        <div class="svc-in"><div class="svc-body" data-reveal><p>Design visual, layouts responsivos e protótipos navegáveis para sites, aplicativos e sistemas.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
-        <div class="ph" data-reveal><img class="photo" style="--r:4/3" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&h=600&q=75" srcset="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=480&h=360&q=75 480w, https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&h=600&q=75 800w, https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&h=900&q=75 1200w" sizes="(min-width:960px) 460px, 100vw" width="1200" height="900" alt="Paleta de cores e amostras sobre uma mesa de trabalho, referência de UI design e identidade visual" loading="lazy" decoding="async"></div></div>
+        <div class="svc-in"><div class="svc-body" data-reveal><span class="svc-idx serif" aria-hidden="true">02</span><p>Design visual, layouts responsivos e protótipos navegáveis para sites, aplicativos e sistemas.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
+        <div class="svc-mock" data-reveal><div class="mock mock--dark mk-ui" data-mock role="img" aria-label="Ilustração animada de um design system: tipografia, paleta de cores, botão, interruptor e cartão de interface sendo montados">
+            <div class="mk-win" data-depth="1"><div class="mk-bar"><span class="mk-path">projeto / ui / design-system</span><span class="mk-live"><i></i>ao vivo</span></div>
+              <div class="ui-grid">
+                <div class="ui-type"><span class="serif">Aa</span><small>Fraunces 300<br>IBM Plex Mono</small></div>
+                <div class="ui-sw"><i style="--c:#f6f6f4;--k:0"></i><i style="--c:#aaa674;--k:1"></i><i style="--c:#57584b;--k:2"></i><i style="--c:#fff347;--k:3"></i></div>
+                <div class="ui-comp"><span class="ui-btn">Começar agora</span><span class="ui-tg"><i></i></span></div>
+                <div class="ui-card" data-depth="2"><span class="ui-img"></span><span class="ui-l l1"></span><span class="ui-l l2"></span><span class="ui-l l3"></span></div>
+                <span class="mk-cursor" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div></div></div>
       </article>
       <article class="card svc" style="--i:2">
         <div class="svc-h" data-reveal><span class="tag">03 · IA</span><h3 class="serif t-32">Inteligência Artificial (IA)</h3></div>
-        <div class="svc-in"><div class="svc-body" data-reveal><p>Personalização da experiência e IA integrada ao produto digital, com consultoria especializada.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
-        <div class="ph" data-reveal><img class="photo" style="--r:4/3" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&h=600&q=75" srcset="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=480&h=360&q=75 480w, https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&h=600&q=75 800w, https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&h=900&q=75 1200w" sizes="(min-width:960px) 460px, 100vw" width="1200" height="900" alt="Robô lendo um livro, representando inteligência artificial aplicada ao design de produtos digitais" loading="lazy" decoding="async"></div></div>
+        <div class="svc-in"><div class="svc-body" data-reveal><span class="svc-idx serif" aria-hidden="true">03</span><p>Personalização da experiência e IA integrada ao produto digital, com consultoria especializada.</p><a class="more" href="#solucoes">Ver soluções <span class="arr" aria-hidden="true">→</span></a></div>
+        <div class="svc-mock" data-reveal><div class="mock mk-ia" data-mock role="img" aria-label="Ilustração animada de um agente de inteligência artificial conversando com a equipe e gerando variações de uma tela">
+            <div class="mk-win" data-depth="1"><div class="mk-bar"><span class="mk-path">agente de design · IA</span><span class="mk-live"><i></i>ao vivo</span></div>
+              <div class="chat">
+                <p class="msg me">Personalize a tela inicial para quem volta ao app</p>
+                <p class="msg ai"><span class="av" aria-hidden="true"></span><span class="typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="txt">Pronto! Criei 3 variações usando o histórico de cada pessoa.</span></p>
+                <div class="chips" data-depth="2"><span>home-retorno-v1</span><span>v2</span><span>v3</span></div>
+              </div>
+            </div>
+          </div></div></div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="sec" id="solucoes" aria-labelledby="h-sol">
+<section class="sec" data-frame id="solucoes" aria-labelledby="h-sol">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-reveal>Soluções</p>
@@ -177,27 +215,48 @@
         <p data-reveal>Diferente do MVP tradicional, o MLP vai além da funcionalidade básica: ele entrega uma <strong>experiência do usuário (UX Design) agradável</strong>, validando sua ideia com <strong>valor real e impacto emocional</strong> desde o primeiro uso.</p>
         <div class="btn-row" data-reveal><a class="btn btn-fill" href="#contato">Tenho interesse <span class="arr" aria-hidden="true">→</span></a></div>
       </div>
-      <div class="mlp-img" data-reveal><div class="ph"><img class="photo" style="--r:3/4" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&h=1067&q=75" srcset="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=480&h=640&q=75 480w, https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&h=1067&q=75 800w, https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&h=1600&q=75 1200w" sizes="(min-width:960px) 420px, 100vw" width="1200" height="1600" alt="Pessoa segurando um celular com um aplicativo aberto, exemplo de produto digital mínimo e amável (MLP)" loading="lazy" decoding="async"></div></div>
+      <div class="mlp-img" data-reveal>
+        <div class="mock mk-mlp" data-mock role="img" aria-label="Ilustração animada de um aplicativo de restaurantes em um celular, com a interface passando de produto mínimo viável (MVP) para produto mínimo amável (MLP)">
+          <div class="mlp-switch" data-depth="2" aria-hidden="true"><span>MVP</span><span>MLP</span><i></i></div>
+          <div class="phone" data-depth="1">
+            <div class="phone-in">
+              <div class="app-top"><small>Olá, Ana</small><b class="serif">Encontre o melhor lugar para seu jantar</b></div>
+              <div class="app-cats"><span>Massas</span><span>Japonesa</span><span>Brasileira</span></div>
+              <div class="app-feed"><div class="app-list">
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Cantina da Praça</span><span class="app-m">Massas · 20 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Sushi Kaze</span><span class="app-m">Japonesa · 25 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Panela de Barro</span><span class="app-m">Brasileira · 15 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Bistrô do Largo</span><span class="app-m">Francesa · 30 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Cantina da Praça</span><span class="app-m">Massas · 20 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Sushi Kaze</span><span class="app-m">Japonesa · 25 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Panela de Barro</span><span class="app-m">Brasileira · 15 min</span><span class="app-heart"></span></div>
+                <div class="app-card"><span class="app-pic"></span><span class="app-t">Bistrô do Largo</span><span class="app-m">Francesa · 30 min</span><span class="app-heart"></span></div>
+              </div></div>
+              <div class="app-toast">Seu pedido na sua casa em apenas 10 mins!</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="numeros" aria-labelledby="h-num">
+<section class="sec" data-frame id="numeros" aria-labelledby="h-num">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-reveal>Números</p>
       <h2 class="serif t-48" id="h-num" data-split>Resultados de projetos de design entregues</h2>
     </div>
     <div class="stats" data-stagger>
-      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="36" data-prefix="" data-suffix="">36</span><p>Empresas que nos contrataram</p></div></div>
-      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="60" data-prefix="+" data-suffix="">+60</span><p>Projetos completos entregues</p></div></div>
-      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="100" data-prefix="" data-suffix="%">100%</span><p>De satisfação dos projetos entregues</p></div></div>
-      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="7" data-prefix="" data-suffix="">7</span><p>É a quantidade de dias em média para a entrega de um site completo</p></div></div>
+      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="36" data-prefix="" data-suffix="">36</span><span class="stat-bar" aria-hidden="true"></span><p>Empresas que nos contrataram</p></div></div>
+      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="60" data-prefix="+" data-suffix="">+60</span><span class="stat-bar" aria-hidden="true"></span><p>Projetos completos entregues</p></div></div>
+      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="100" data-prefix="" data-suffix="%">100%</span><span class="stat-bar" aria-hidden="true"></span><p>De satisfação dos projetos entregues</p></div></div>
+      <div class="stat"><div class="stat-in" data-reveal><span class="serif fig" data-count="7" data-prefix="" data-suffix="">7</span><span class="stat-bar" aria-hidden="true"></span><p>É a quantidade de dias em média para a entrega de um site completo</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="faq" aria-labelledby="h-faq">
+<section class="sec" data-frame id="faq" aria-labelledby="h-faq">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow" data-reveal>Perguntas frequentes</p>
@@ -219,7 +278,7 @@
 <section class="sec" id="fundador" aria-labelledby="h-fund">
   <div class="wrap">
     <div class="founder g12">
-      <div class="ph" data-reveal><img class="photo" style="--r:351/351" src="assets/img/bruno-bernardes.jpg" width="351" height="351" alt="Bruno Bernardes, fundador da UiLook e UX/UI designer" loading="lazy" decoding="async"></div>
+      <div class="founder-ph" data-reveal><span class="br tl" aria-hidden="true"></span><span class="br tr" aria-hidden="true"></span><span class="br bl" aria-hidden="true"></span><span class="br brr" aria-hidden="true"></span><div class="ph"><img class="photo" style="--r:351/351" src="assets/img/bruno-bernardes.jpg" width="351" height="351" alt="Bruno Bernardes, fundador da UiLook e designer" loading="lazy" decoding="async"></div></div>
       <div class="founder-text">
         <p class="eyebrow" data-reveal>Fundador</p>
         <h2 class="serif t-48" id="h-fund" data-split>Bruno Bernardes</h2>
@@ -236,7 +295,7 @@
   </div>
 </section>
 
-<section class="sec" id="contato" aria-labelledby="h-cont">
+<section class="sec" data-frame id="contato" aria-labelledby="h-cont">
   <div class="wrap">
     <div class="contact">
       <div class="contact-head">
@@ -256,7 +315,17 @@
         </form>
         <p class="form-ok" role="status" hidden></p>
       </div>
-      <div class="ph contact-ph" data-reveal><img class="photo" style="--r:4/3" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&h=600&q=75" srcset="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=480&h=360&q=75 480w, https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&h=600&q=75 800w, https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&h=900&q=75 1200w" sizes="(min-width:960px) 486px, 100vw" width="1200" height="900" alt="Mão escrevendo uma lista em um caderno, planejamento de um projeto digital" loading="lazy" decoding="async"></div>
+      <div class="contact-ph" data-reveal>
+        <div class="mock mock--dark mk-chat" data-mock role="img" aria-label="Ilustração animada de uma conversa no WhatsApp com a UiLook começando com a mensagem: Olá, tudo bem? Podemos marcar uma conversa?">
+          <div class="mk-win" data-depth="1"><div class="mk-bar"><span class="mk-path">whatsapp · uilook</span><span class="mk-live"><i></i>ao vivo</span></div>
+            <div class="chat">
+              <p class="msg me">Olá, tudo bem? Podemos marcar uma conversa?</p>
+              <p class="msg ai"><span class="av" aria-hidden="true"></span><span class="typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="txt">Claro! Conte um pouco sobre a sua ideia.</span></p>
+              <p class="msg me m2">Quero tirar um aplicativo do papel</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -297,5 +366,6 @@
 <script src="assets/vendor/lenis.min.js"></script>
 <script>window.UILOOK_WA="https://api.whatsapp.com/send/?phone=5541998073814"</script>
 <script src="js/main.js"></script>
+<script type="module" src="js/hero3d.js"></script>
 </body>
 </html>
