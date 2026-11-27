@@ -117,34 +117,20 @@
   /* ---------- FAQ accordion ---------- */
   var items=$$('.faq-btn');
   function setFaq(b,open){
-    var p=document.getElementById(b.getAttribute('aria-controls'));
     b.setAttribute('aria-expanded',String(open));
-    if(open){
-      p.classList.add('open');
-      p.style.height=p.scrollHeight+'px';
-      if(reduce)p.style.height='auto';
-      else{var h=function(e){if(e.propertyName==='height'&&b.getAttribute('aria-expanded')==='true'){p.style.height='auto'}p.removeEventListener('transitionend',h)};p.addEventListener('transitionend',h)}
-    }else{
-      p.style.height=p.scrollHeight+'px';
-      void p.offsetHeight;
-      p.classList.remove('open');
-      p.style.height='0px';
-    }
+    document.getElementById(b.getAttribute('aria-controls')).classList.toggle('open',open);
   }
-  items.forEach(function(b,i){
-    var p=document.getElementById(b.getAttribute('aria-controls'));
-    if(i===0){p.style.height='auto'}
+  items.forEach(function(b){
     b.addEventListener('click',function(){
       var open=b.getAttribute('aria-expanded')==='true';
       items.forEach(function(o){if(o!==b&&o.getAttribute('aria-expanded')==='true')setFaq(o,false)});
       setFaq(b,!open);
     });
   });
-  window.addEventListener('resize',function(){items.forEach(function(b){if(b.getAttribute('aria-expanded')==='true')document.getElementById(b.getAttribute('aria-controls')).style.height='auto'})});
 
   /* ---------- Scroll-linked: progress, hero parallax, floating button ---------- */
-  var bar=$('#progress'),hv=$('#hero-visual'),hvImg=hv&&$('.hv-frame img',hv),fab=$('#fab');
-  var hidden={contato:false,rodape:false},ticking=false;
+  var bar=$('#progress'),hv=$('#hero-visual'),hvImg=hv&&$('.orb',hv),fab=$('#fab');
+  var hidden={contato:false,rodape:false,diagnostico:false},ticking=false,lastY=0,fabUp=false,idleT;
   function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
   function update(){
     ticking=false;
@@ -152,17 +138,22 @@
     if(bar&&!reduce)bar.style.transform='scaleX('+(max>0?clamp(y/max,0,1):0)+')';
     if(hv&&hvImg&&!reduce){
       var r=hv.getBoundingClientRect(),p=clamp((vh-r.top)/(vh+r.height),0,1);
-      hvImg.style.transform='translate3d(0,'+((p-.35)*-48).toFixed(1)+'px,0) scale('+(1+p*.14).toFixed(3)+')';
+      hvImg.style.transform='translate3d(0,'+((p-.35)*-40).toFixed(1)+'px,0) scale('+(1+p*.1).toFixed(3)+')';
     }
-    if(fab)fab.classList.toggle('show',y>vh*.6&&!hidden.contato&&!hidden.rodape);
+    var dy=y-lastY;
+    if(Math.abs(dy)>4){
+      fabUp=dy<0;lastY=y;
+      clearTimeout(idleT);idleT=setTimeout(function(){fabUp=false;update()},3000);
+    }
+    if(fab)fab.classList.toggle('show',y>vh*.6&&fabUp&&!hidden.contato&&!hidden.rodape&&!hidden.diagnostico);
   }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll,{passive:true});
   if('IntersectionObserver' in window){
-    ['contato','rodape'].forEach(function(id){
+    ['contato','rodape','diagnostico'].forEach(function(id){
       var el=document.getElementById(id);if(!el)return;
-      new IntersectionObserver(function(es){hidden[id]=es[0].isIntersecting;onScroll()},{threshold:0,rootMargin:'0px 0px -10% 0px'}).observe(el);
+      new IntersectionObserver(function(es){hidden[id]=es[0].isIntersecting;onScroll()},{threshold:0,rootMargin:'-70% 0px 0px 0px'}).observe(el);
     });
   }
   update();
