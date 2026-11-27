@@ -148,7 +148,8 @@
       }else if(svcCards.length){svcCards.forEach(function(c){c.style.transform=''})}
       if(diagPanel){
         var dr=diagPanel.getBoundingClientRect(),dp=clamp((vh-dr.top)/(vh*.75),0,1),de=1-Math.pow(1-dp,3);
-        diagPanel.style.clipPath='inset(0 '+((1-de)*6).toFixed(2)+'% round 8px)';
+        var dpad=Math.max(0,(parseFloat(getComputedStyle(diagPanel).paddingLeft)||24)-12);
+        diagPanel.style.clipPath='inset(0 '+((1-de)*Math.min(56,dpad)).toFixed(1)+'px round 8px)';
       }
     }
     var dy=y-lastY;
