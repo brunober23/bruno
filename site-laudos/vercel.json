@@ -1,6 +1,26 @@
 {
+  "cleanUrls": false,
   "redirects": [
-    { "source": "/cookies.html", "destination": "/privacidade.html#cookies", "permanent": true },
-    { "source": "/cookies", "destination": "/privacidade.html#cookies", "permanent": true }
+    {
+      "source": "/cookies.html",
+      "destination": "/privacidade.html#cookies",
+      "permanent": true
+    },
+    {
+      "source": "/cookies",
+      "destination": "/privacidade.html#cookies",
+      "permanent": true
+    },
+    {
+      "source": "/infiltracao-trinca-vicios-construtivos.html",
+      "destination": "/infiltracao-trinca-vicios-construtivos",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/infiltracao-trinca-vicios-construtivos",
+      "destination": "/infiltracao-trinca-vicios-construtivos.html"
+    }
   ]
 }
