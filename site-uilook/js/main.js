@@ -138,7 +138,8 @@
     if(bar&&!reduce)bar.style.transform='scaleX('+(max>0?clamp(y/max,0,1):0)+')';
     if(hv&&hvImg&&!reduce){
       var r=hv.getBoundingClientRect(),p=clamp((vh-r.top)/(vh+r.height),0,1);
-      hvImg.style.transform='translate3d(0,'+((p-.35)*-40).toFixed(1)+'px,0) scale('+(1+p*.1).toFixed(3)+')';
+      var pad=parseFloat(getComputedStyle(hv).paddingTop)||24,mx=Math.max(8,pad-14),ty=clamp((p-.5)*-130,-mx,mx);
+      hvImg.style.transform='translate3d(0,'+ty.toFixed(1)+'px,0) scale('+(1+p*.04).toFixed(3)+')';
     }
     var dy=y-lastY;
     if(Math.abs(dy)>4){
